@@ -1,0 +1,26 @@
+.container img {
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+}
+.container {
+  display: grid;
+  justify-content: center;
+}
+.user h1  {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.user p  {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container button {
+  width: 200px;
+  height: 50px;
+  border-radius: 5px;
+  background-color: rgb(9, 233, 218);
+  cursor: pointer;
+}
