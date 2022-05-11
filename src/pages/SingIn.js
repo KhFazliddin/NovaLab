@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
@@ -11,8 +11,8 @@ import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { Navigate, useNavigate } from "react-router-dom";
-import { FetchAsyncUser, FetchAsyncUserId,loggenInUser,addUser} from "../redux/feature/userSlice";
+import { useNavigate } from "react-router-dom";
+import { FetchAsyncUser,loggenInUser,addUser} from "../redux/feature/userSlice";
 
 
 function Copyright(props) {
@@ -37,7 +37,6 @@ const theme = createTheme();
 
 export default function SignIn() {
   const state = useSelector((state) => state.auth.users);
-  const loggedIn=useSelector(state=>state.auth.loggedIn)
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -53,7 +52,7 @@ export default function SignIn() {
    if(check){
      dispatch(loggenInUser())
      dispatch(addUser(Formdata))
-     navigate('/')
+     navigate('/NovaLab')
    }
    
   };

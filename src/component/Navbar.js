@@ -38,7 +38,7 @@ const Navbar = () => {
             </Typography>
           </Link>
           <Box sx={{ display: "flex" }}>
-            <Link style={noneLink} to="/">
+            <Link style={noneLink} to="/NovaLab">
               <Typography sx={{ minWidth: 100 }}>Home</Typography>
             </Link>
             <Link style={noneLink} to="/signin">
