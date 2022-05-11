@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { FetchAsyncUser, FetchAsyncUserId } from "../redux/feature/userSlice";
+import { FetchAsyncUser} from "../redux/feature/userSlice";
 import "../assets/style/Profile.css";
 import Props from "./Props";
 
 function Profile() {
-  const [user, setUser] = useState([]);
   const state = useSelector((state) => state.auth.users);
   const state2 = useSelector((state) => state.auth);
 

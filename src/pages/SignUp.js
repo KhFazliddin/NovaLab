@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
@@ -36,9 +36,6 @@ const theme = createTheme();
 
 export default function SignUp() {
 
-
-  const user = useSelector((state) => state.auth.users);
-  const dispatch = useDispatch();
 
   const handleSubmit = (event) => {
     event.preventDefault();
